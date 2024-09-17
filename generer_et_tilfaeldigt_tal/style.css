@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --fluid-40-60: clamp(2.5rem, 2.0652rem + 2.1739vw, 3.75rem);
+  --button-bg: #ff2d54;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  height: 100vh;
+  background-color: #3a3838;
+  color: white;
+  font-family: "open sans";
+  padding: 2rem;
+  text-wrap: pretty;
+
+  div {
+    display: flex;
+    gap: 0.5rem;
+    place-self: center;
+    flex-wrap: wrap;
+  }
+
+  p {
+    place-self: center;
+    font-size: 2rem;
+  }
+}
+
+h1 {
+  font-size: var(--fluid-40-60);
+}
+
+input {
+  padding: 1rem;
+  border-radius: 50px;
+  border: none;
+  max-width: 300px;
+  font-size: 1.25rem;
+}
+
+button {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1.25rem;
+  background: var(--button-bg);
+  color: white;
+  cursor: pointer;
+  width: fit-content;
+  place-self: center;
+
+  &:hover {
+    background: oklch(from var(--button-bg) calc(l - 0.05) c h);
+  }
+
+  &:active {
+    background: oklch(from var(--button-bg) calc(l - 0.1) c h);
+  }
+}

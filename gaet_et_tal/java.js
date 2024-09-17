@@ -1,3 +1,4 @@
+"use strict";
 // Generér et tilfældigt tal mellem 0 og 100
 let randomNumber = Math.floor(Math.random() * 101);
 
