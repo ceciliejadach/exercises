@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+#startButton {
+  border: none;
+  background: blue;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  border: 1px solid blue;
+  font-size: 1rem;
+  cursor: pointer;
+  width: fit-content;
+  justify-self: center;
+}
+
+button {
+  border: none;
+  background: transparent;
+  color: blue;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  border: 1px solid blue;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.center {
+  justify-self: center;
+}
+
+#guessDisplay {
+  font-size: 1.5rem;
+}
+
+#guessCountDisplay {
+  display: none;
+}
