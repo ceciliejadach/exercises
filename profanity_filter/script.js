@@ -4,22 +4,32 @@ const curseWords = [
   { bad: "marquee", good: "just don't" },
 ];
 
-//laver en konstant variabel for knappen
 const updateTextButton = document.getElementById("update-button");
 
-//laver en variabel for vores tekst
 let textElement = document.getElementById("text");
 
-//laver en funktion for opdatering af teksten
 function updateText() {
-  let text = textElement.textContent; //laver en variabel, så teksten bliver retuneret inden i funktionen
+  let text = textElement.textContent;
 
-  //looper gennem array og tager fat i hvert element
   curseWords.forEach((element) => {
-    text = text.split(element.bad).join(element.good); //splitter og fjerner teksten ved de dårlige ord og samler den med de gode
+    // text = text.split(element.bad).join(element.good); //begge metoder kan bruges
+    text = text.replaceAll(element.bad, `<span>${element.good}</span>`); //begge metoder kan bruges
   });
 
-  textElement.textContent = text; //udskriver den nye tekst
+  textElement.innerHTML = text;
 }
 
-updateTextButton.addEventListener("click", updateText); //tilføjer eventlistner til knappen
+updateTextButton.addEventListener("click", updateText);
+
+// let theText = document.querySelector("p").textContent;
+// document.querySelector("button").addEventListener("click", replaceBadWords);
+
+// function replaceBadWords() {
+//   curseWords.forEach((curseWord) => {
+//     theText = theText.replaceAll(curseWord.bad, curseWord.good);
+//   });
+// }
+
+// function isItSafe() {
+//   return false;
+// }
