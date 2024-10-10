@@ -91,6 +91,28 @@ function isDog(animal) {
   return animal.type === "dog";
 }
 
+function sortList() {
+  const list = allAnimals;
+
+  const sortedList = list.sort(sortByType);
+  displayList(sortedList);
+}
+
+function sortByName(animalA, animalB) {
+  if (animalA.name < animalB.name) {
+    return -1;
+  } else {
+    return 1;
+  }
+}
+
+function sortByType(animalA, animalB) {
+  if (animalA.type < animalB.type) {
+    return -1;
+  } else {
+    return 1;
+  }
+}
 function displayList(animals) {
   // clear the list
   document.querySelector("#list tbody").innerHTML = "";
