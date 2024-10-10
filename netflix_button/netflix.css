@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  padding: 1rem;
+  height: 100vh;
+}
+
+button {
+  outline: none;
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  border-radius: 5px;
+  color: linear-gradient(to left, black 50%, white 50%) right;
+  cursor: pointer;
+  background: linear-gradient(to left, white 50%, black 50%) right;
+  background-size: 200%;
+  transition: all 0.35s;
+  animation: fill 5s linear;
+}
+
+@keyframes fill {
+  from {
+    background-position: right;
+    color: black;
+  }
+  to {
+    background-position: left;
+    color: white;
+  }
+}
