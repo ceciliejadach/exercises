@@ -1,0 +1,7 @@
+div {
+  width: var(--width);
+  height: var(--height);
+  background: var(--color);
+  display: grid;
+  place-content: center;
+}
